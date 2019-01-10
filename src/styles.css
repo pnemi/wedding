@@ -93,12 +93,20 @@
   clear: both;
 }
 
-.timeline__icon {
-  @apply w-12 h-12 absolute bg-grey-light overflow-hidden;
+.timeline__icon-bg {
+  @apply flex w-12 h-12 bg-grey-light absolute border-4 border-grey-light overflow-hidden items-center justify-center;
   left: 50%;
   top: 0;
   margin-left: -20px;
   border-radius: 50%;
+}
+
+.timeline__icon {
+  @apply w-6 h-6;
+}
+
+.timeline__icon--dish {
+  margin-top: -5px;
 }
 
 .timeline__content {
@@ -109,7 +117,7 @@
 }
 
 .timeline__header {
-  @apply p-4 text-xl text-white bg-blue-dark rounded rounded-bl-none rounded-br-none;
+  @apply p-4 text-xl uppercase text-white bg-blue-dark rounded rounded-bl-none rounded-br-none;
   margin: -20px -20px 0 -20px;
 }
 
