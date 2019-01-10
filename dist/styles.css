@@ -4,6 +4,8 @@
   width: 768px;
   align-self: center;
   margin: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .container-main {
@@ -14,8 +16,8 @@
 
 .heading {
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* HEADER */
@@ -114,7 +116,9 @@
 .timeline {
   margin-left: 1rem;
   margin-right: 1rem;
+  margin-bottom: 3rem;
   position: relative;
+  width: 90%;
   transition: all .4s ease;
 }
 
@@ -124,7 +128,7 @@
   background-color: #dae1e7;
   position: absolute;
   content: "";
-  left: 50%;
+  left: 0;
   top: 0;
 }
 
@@ -137,6 +141,10 @@
 .timeline__item {
   margin-bottom: 3rem;
   position: relative;
+}
+
+.timeline__item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline__item:after {
@@ -156,9 +164,9 @@
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  left: 50%;
+  left: 0;
   top: 0;
-  margin-left: -20px;
+  margin-left: -22px;
   border-radius: 50%;
 }
 
@@ -175,9 +183,38 @@
   padding: 1.25rem;
   background-color: #f8fafc;
   border-radius: .25rem;
-  width: 45%;
+  width: 90%;
+  float: right;
   box-shadow: 0 3px rgba(0, 0, 0, .1);
   transition: all .4s ease;
+}
+
+.timeline__content:before {
+  border-color: #2779bd;
+}
+
+.timeline__content--right:before {
+  border-color: #cc1f1a;
+}
+
+.timeline__content:before,
+.timeline__content--right:before {
+  position: absolute;
+  border-width: 8px;
+  border-left-width: 0;
+  border-style: solid;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 10%;
+  top: 20px;
+  margin-left: -8px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.timeline__content--right {
+  float: right;
 }
 
 .timeline__header {
@@ -192,38 +229,8 @@
   margin: -20px -20px 0 -20px;
 }
 
-.timeline__header:before {
-  position: absolute;
-  border-width: 8px;
-  border-style: solid;
-  border-right-width: 0;
-  border-color: #2779bd;
-  content: "";
-  left: 45%;
-  top: 20px;
-  width: 0;
-  height: 0;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-}
-
-.timeline__content--right {
-  float: right;
-}
-
 .timeline__header--right {
   background-color: #cc1f1a;
-}
-
-.timeline__header--right:before {
-  border-left-width: 0;
-  border-right-width: 8px;
-  border-color: #cc1f1a;
-  content: "";
-  right: 45%;
-  left: inherit;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
 }
 
 .timeline__p {
@@ -233,10 +240,12 @@
 
 /* SECTION: O NÁS */
 
+.about-wrapper {
+  background-color: #6cb2eb;
+}
+
 .about {
   width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   line-height: 2;
 }
 
@@ -294,12 +303,47 @@
     font-size: 2.25rem;
   }
 
-  .about-wrapper {
+  .timeline-bg {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-image: url("../public/map.svg");
     background-size: 130vw;
+  }
+
+  .timeline {
+    width: auto;
+  }
+
+  .timeline:before {
+    left: 50%;
+  }
+
+  .timeline__content {
+    float: none;
+    width: 45%;
+  }
+
+  .timeline__content:before {
+    border-left-width: 8px;
+    border-right-width: 0;
+    left: 45%;
+    margin-left: 0;
+  }
+
+  .timeline__content--right {
+    float: right;
+  }
+
+  .timeline__content--right:before {
+    border-left-width: 0;
+    border-right-width: 8px;
+    left: inherit;
+    right: 45%;
+  }
+
+  .timeline__icon-bg {
+    left: 50%;
   }
 }
 
