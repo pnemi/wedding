@@ -1,0 +1,27 @@
+{
+  "name": "wedding",
+  "version": "1.0.0",
+  "description": "M&P Wedding Page",
+  "main": "index.html",
+  "scripts": {
+    "watch": "watch 'yarn build:css' ./src",
+    "build:css": "./node_modules/.bin/tailwind build ./src/styles.css -c ./src/tailwind.config.js -o ./dist/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnemi/wedding.git"
+  },
+  "author": "Petr Němeček",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pnemi/wedding/issues"
+  },
+  "homepage": "https://github.com/pnemi/wedding#readme",
+  "devDependencies": {
+    "tailwindcss": "^0.7.3"
+  },
+  "dependencies": {
+    "watch": "^1.0.2"
+  }
+}
