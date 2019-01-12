@@ -257,7 +257,8 @@
 /* SECTION: O NÁS */
 
 .about-wrapper {
-  padding: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   background-color: #3d4852;
   color: #dae1e7;
 }
@@ -265,6 +266,13 @@
 .about {
   width: 100%;
   line-height: 2;
+}
+
+.about__avatar {
+  width: 16rem;
+  display: block;
+  margin: auto;
+  border-radius: 9999px;
 }
 
 .about__caption {

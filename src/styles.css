@@ -170,11 +170,15 @@
 /* SECTION: O NÁS */
 
 .about-wrapper {
-  @apply p-12 bg-grey-darkest text-grey-light;
+  @apply py-12 bg-grey-darkest text-grey-light;
 }
 
 .about {
   @apply w-full leading-loose;
+}
+
+.about__avatar {
+  @apply w-64 block m-auto rounded-full;
 }
 
 .about__caption {
