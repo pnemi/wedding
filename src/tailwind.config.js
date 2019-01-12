@@ -772,6 +772,7 @@ module.exports = {
 
   zIndex: {
     auto: "auto",
+    hide: -1,
     "0": 0,
     "10": 10,
     "20": 20,

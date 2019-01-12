@@ -33,7 +33,7 @@
 /* COVER */
 
 .cover {
-  @apply bg-cover bg-center relative w-screen h-screen;
+  @apply z-hide bg-cover bg-center relative w-screen h-screen;
   background-image: url("../public/cover.jpg");
 }
 
@@ -44,7 +44,7 @@
 }
 
 .cover--parallax {
-  @apply flex flex-grow flex-no-shrink relative z-0 h-screen justify-center items-center;
+  @apply flex flex-grow flex-no-shrink relative h-screen justify-center items-center;
   transform: translateZ(-1px) scale(2);
 }
 
@@ -66,7 +66,7 @@
 /* SECTION: SCHEDULE */
 
 .timeline {
-  @apply mx-4 mb-12 relative;
+  @apply mx-4 relative;
   width: 90%;
   transition: all 0.4s ease;
 }
@@ -82,6 +82,13 @@
   content: "";
   display: table;
   clear: both;
+}
+
+.timeline__header {
+  @apply py-2 px-6 mb-12 bg-grey-light text-3xl relative inline-block text-grey-dark;
+  left: 50%;
+  border-radius: 30% / 100%;
+  transform: translateX(-50%);
 }
 
 .timeline__item {
@@ -147,12 +154,12 @@
   @apply float-right;
 }
 
-.timeline__header {
+.timeline__heading {
   @apply p-4 text-xl uppercase text-white bg-blue-dark rounded rounded-bl-none rounded-br-none;
   margin: -20px -20px 0 -20px;
 }
 
-.timeline__header--right {
+.timeline__heading--right {
   @apply bg-red-dark;
 }
 
@@ -163,7 +170,7 @@
 /* SECTION: O NÁS */
 
 .about-wrapper {
-  @apply bg-blue-light;
+  @apply p-12 bg-grey-darkest text-grey-light;
 }
 
 .about {
@@ -174,13 +181,13 @@
   @apply w-full text-center text-base leading-none;
 }
 
-.about__caption--groom {
+/* .about__caption--groom {
   @apply text-blue-darkest;
 }
 
 .about__caption--bride {
   @apply text-orange-light;
-}
+} */
 
 .about__name {
   @apply text-center font-light text-2xl;
@@ -208,6 +215,16 @@
 
 /* RESPONSIVE */
 
+@screen sm {
+  .about--groom {
+    @apply pr-4;
+  }
+
+  .about--bride {
+    @apply pl-4;
+  }
+}
+
 @screen md {
   .nav {
     @apply w-md;
@@ -218,7 +235,7 @@
   }
 
   .timeline-bg {
-    @apply bg-no-repeat bg-fixed bg-center;
+    @apply pb-12 bg-no-repeat bg-fixed bg-center;
     background-image: url("../public/map.svg");
     background-size: 130vw;
   }
