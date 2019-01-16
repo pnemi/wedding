@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Miška & Péťa | 🇨🇿 & 🇸🇰</title>
+    <title>Miška & Péťa | Svatba 2019</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -16,105 +16,147 @@
   </head>
   <body>
     <header>
-      <nav class="nav-wrapper">
-        <div class="nav">
-          <a href="#" class="nav__link">Kdy & Kde</a>
-          <a href="#" class="nav__link">O nás</a>
-          <a href="#" class="nav__link">Foto</a>
-          <a href="#" class="nav__link">Dary</a>
-          <a href="#" class="nav__link">Kontakt</a>
+      <nav class="l-nav">
+        <div class="nav sm:nav--sm">
+          <a href="#venue" class="nav__link">Kdy & Kde</a>
+          <a href="#about" class="nav__link">O nás</a>
+          <a href="#photos" class="nav__link">Foto</a>
+          <a href="#gifts" class="nav__link">Dary</a>
+          <a href="#contact" class="nav__link">Kontakt</a>
         </div>
       </nav>
     </header>
 
-    <div class="cover--parallax-wrapper">
-      <section class="cover cover--parallax">
+    <div class="l-cover-parallax">
+      <section class="l-cover cover-parallax">
         <div class="cover__overlay">
-          <span class="cover__overlay-text"
-            >Peťo <span class="amp">&amp;</span> Miška 2019</span
+          <div class="cover__heading">
+            Peťo <span class="amp">&amp;</span> Miška 2019
+          </div>
+          <small class="cover__subtitle"
+            >Berieme sa. Buďte u toho s námi.</small
           >
         </div>
       </section>
 
-      <main class="container-main">
-        <div class="timeline-bg">
-          <section class="container">
-            <h1 class="heading">Kdy & Kde</h1>
+      <main class="l-container-main">
+        <a class="anchor" name="venue"></a>
+        <div class="l-timeline">
+          <section class="l-container">
+            <div class="l-row">
+              <h1 class="heading">Kdy & Kde</h1>
 
-            <div class="timeline">
-              <div class="timeline__header">27.7.2019</div>
-              <div class="timeline__item">
-                <div class="timeline__icon-bg">
-                  <img
-                    class="timeline__icon"
-                    src="./public/rings.svg"
-                    alt="rings"
-                  />
+              <div class="timeline">
+                <div class="timeline__header">27.7.2019</div>
+                <div class="timeline__item">
+                  <div class="timeline__icon-bg">
+                    <img
+                      class="timeline__icon"
+                      src="./public/rings.svg"
+                      alt="rings"
+                    />
+                  </div>
+                  <div class="timeline__content">
+                    <h2 class="timeline__heading">14:00 Obřad –</h2>
+                    <p class="timeline__p">
+                      - gratulace - přesun na místo hostiny
+                    </p>
+                    <div class="l-map">
+                      <div class="l-iframe">
+                        <iframe
+                          class="iframe"
+                          src="https://api.mapy.cz/frame?params=%7B%22x%22%3A19.246597452855724%2C%22y%22%3A49.20459422183605%2C%22base%22%3A%221%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A15%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2F3kxkY%22%2C%22mark%22%3A%7B%22x%22%3A%2219.2466403682%22%2C%22y%22%3A%2249.2037705645%22%2C%22title%22%3A%22Kostel%22%7D%2C%22overview%22%3Atrue%7D&amp;width=500&amp;height=333&amp;lang=cs"
+                          frameBorder="0"
+                        ></iframe>
+                      </div>
+                      <div class="map__content">
+                        <div class="map__title">Evanjelický kostol</div>
+                        <address class="map__subtitle">
+                          Veličná 2263 <br />
+                          027 54 Veličná <br />
+                          okres Dolný Kubín, Žilinský kraj, Slovensko
+                        </address>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="timeline__content">
-                  <h2 class="timeline__heading">Obřad – 14:00</h2>
-                  <p class="timeline__p">
-                    - gratulace - přesun na místo hostiny
-                  </p>
+                <div class="timeline__item">
+                  <div class="timeline__icon-bg">
+                    <img
+                      class="timeline__icon"
+                      src="./public/cheers.svg"
+                      alt="cheers"
+                    />
+                  </div>
+                  <div class="timeline__content timeline__content--right">
+                    <h2 class="timeline__heading timeline__heading--right">
+                      18:00 Večeře –
+                    </h2>
+                    <p class="timeline__p">
+                      - přípitek - príhovoř - (mladomanželský a rodičovský)
+                      tanec - volná zábava, fotokoutek (fixed time) - taneční
+                      kola a aktivity, belgický tanec (?)
+                    </p>
+
+                    <div class="l-map">
+                      <div class="l-iframe">
+                        <iframe
+                          class="iframe"
+                          src="https://api.mapy.cz/frame?params=%7B%22x%22%3A19.265091605870026%2C%22y%22%3A49.194752556328716%2C%22base%22%3A%221%22%2C%22layers%22%3A%5B%5D%2C%22zoom%22%3A16%2C%22url%22%3A%22https%3A%2F%2Fmapy.cz%2Fs%2F3kxn6%22%2C%22mark%22%3A%7B%22x%22%3A%2219.264877029148867%22%2C%22y%22%3A%2249.19452819785681%22%2C%22title%22%3A%22Dom%20Kultury%22%7D%2C%22overview%22%3Atrue%7D&amp;width=500&amp;height=333&amp;lang=cs"
+                          frameBorder="0"
+                        ></iframe>
+                      </div>
+                      <div class="map__content">
+                        <div class="map__title">Dom Kultury</div>
+                        <address class="map__subtitle">
+                          Oravská Poruba 59 <br />
+                          027 54 Oravská Poruba <br />
+                          okres Dolný Kubín, Žilinský kraj, Slovensko
+                        </address>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__icon-bg">
-                  <img
-                    class="timeline__icon"
-                    src="./public/cheers.svg"
-                    alt="cheers"
-                  />
+                <div class="timeline__item">
+                  <div class="timeline__icon-bg">
+                    <img
+                      class="timeline__icon timeline__icon--dish"
+                      src="./public/dish-cap.svg"
+                      alt="dish-cap"
+                    />
+                  </div>
+                  <div class="timeline__content">
+                    <h2 class="timeline__heading">Bufet – 20:00</h2>
+                    <p class="timeline__p"></p>
+                  </div>
                 </div>
-                <div class="timeline__content timeline__content--right">
-                  <h2 class="timeline__heading timeline__heading--right">
-                    Večeře – 18:00
-                  </h2>
-                  <p class="timeline__p">
-                    - přípitek - príhovoř - (mladomanželský a rodičovský) tanec
-                    - volná zábava, fotokoutek (fixed time) - taneční kola a
-                    aktivity, belgický tanec (?)
-                  </p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__icon-bg">
-                  <img
-                    class="timeline__icon timeline__icon--dish"
-                    src="./public/dish-cap.svg"
-                    alt="dish-cap"
-                  />
-                </div>
-                <div class="timeline__content">
-                  <h2 class="timeline__heading">Bufet – 20:00</h2>
-                  <p class="timeline__p"></p>
-                </div>
-              </div>
-              <div class="timeline__item">
-                <div class="timeline__icon-bg">
-                  <img
-                    class="timeline__icon"
-                    src="./public/bride.svg"
-                    alt="bride"
-                  />
-                </div>
-                <div class="timeline__content timeline__content--right">
-                  <h2 class="timeline__heading timeline__heading--right">
-                    Čepčenie – 00:00
-                  </h2>
-                  <p class="timeline__p">
-                    - slovenská tradice alias z nevěsty se stává žena a ženich
-                    zůstává navždy chlapcem - venčekový tanec - tanec v kruhu -
-                    volná zábava
-                  </p>
+                <div class="timeline__item">
+                  <div class="timeline__icon-bg">
+                    <img
+                      class="timeline__icon"
+                      src="./public/bride.svg"
+                      alt="bride"
+                    />
+                  </div>
+                  <div class="timeline__content timeline__content--right">
+                    <h2 class="timeline__heading timeline__heading--right">
+                      Čepčenie – 00:00
+                    </h2>
+                    <p class="timeline__p">
+                      - slovenská tradice alias z nevěsty se stává žena a ženich
+                      zůstává navždy chlapcem - venčekový tanec - tanec v kruhu
+                      - volná zábava
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
         </div>
 
+        <a class="anchor" name="about"></a>
         <section class="about-wrapper">
-          <div class="container flex flex-col sm:flex-row">
+          <div class="l-container flex flex-col sm:flex-row">
             <div class="about about--groom">
               <img
                 class="about__avatar"
@@ -263,19 +305,47 @@
           </div>
         </section>
 
-        <section>
-          <div>
-            peněžní dary – obálka nebo účet, notice na to, že jsme utratili
-            všechny našetřené peníze a start do života...
+        <a class="anchor" name="gifts"></a>
+        <section class="l-container">
+          <div class="l-row l-gift">
+            <div class="gift">
+              <div class="gift__heading">Peněžní</div>
+              <div class="gift__text">
+                obálka nebo účet, notice na to, že jsme utratili všechny
+                našetřené peníze a start do života...
+              </div>
+            </div>
+            <div class="gift">
+              <div class="gift__heading">Věcné</div>
+              <div class="gift__text">
+                hmotné dary – seznam + notice na to, že se stěhujeme do malého
+                již zařízeného bytu, dary pokud jste z česka, nechte dary v
+                česku; pokud omylem zarezervujete něco jiného než jste chtěli
+                nebo máte jiný problém s rezervací,
+                <a href="#contact">kontaktujte nás</a>
+              </div>
+              <a
+                href="https://www.beremese.cz/wedding_registry/tleefsy/ "
+                target="_blank"
+              >
+                <button class="gift__button">Seznam darů</button>
+              </a>
+            </div>
+            <div class="gift">
+              <div class="gift__heading">Vzkazy</div>
+              <div class="gift__text">
+                nějaké vzkazy, které bychom si měli přečíst za pár let nebo nám
+                nakreslete obrázek
+              </div>
+            </div>
           </div>
-          <div>
-            hmotné dary – seznam + notice na to, že se stěhujeme do malého již
-            zařízeného bytu
-          </div>
-          <div></div>
-
-          dary pokud jste z česka, nechte dary v česku
         </section>
+
+        <a class="anchor" name="photos"></a>
+        <section>photos</section>
+
+        <a class="anchor" name="contact"></a>
+        <section>contact</section>
       </main>
     </div>
   </body>

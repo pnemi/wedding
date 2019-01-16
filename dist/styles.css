@@ -1,14 +1,19 @@
 /* GENERAL */
 
-.container {
-  width: 768px;
+.l-container {
+  width: 100%;
   align-self: center;
   margin: auto;
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.container-main {
+.l-row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+
+.l-container-main {
   position: relative;
   background-color: #fff;
   z-index: 10;
@@ -20,17 +25,29 @@
   padding-bottom: 3rem;
 }
 
+.anchor {
+  display: block;
+  -webkit-transform: translateY(-3rem);
+          transform: translateY(-3rem);
+}
+
+.amp {
+  font-style: italic;
+  font-size: 110%;
+  font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+}
+
 /* HEADER */
 
-.nav-wrapper {
+.l-nav {
   width: 100%;
+  height: 3rem;
   position: fixed;
+  justify-content: center;
   z-index: 50;
   font-family: system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   display: flex;
   flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: #fff;
@@ -56,17 +73,7 @@
 
 /* COVER */
 
-.cover {
-  z-index: -1;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("../public/cover.jpg");
-}
-
-.cover--parallax-wrapper {
+.l-cover-parallax {
   height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -76,7 +83,7 @@
           transform-style: preserve-3d;
 }
 
-.cover--parallax {
+.cover-parallax {
   display: flex;
   flex-grow: 1;
   flex-shrink: 0;
@@ -88,34 +95,89 @@
           transform: translateZ(-1px) scale(2);
 }
 
+.l-cover {
+  z-index: -1;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../public/cover.jpg");
+}
+
 .cover__overlay {
   width: 100%;
   height: 100%;
   position: absolute;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, .3);
 }
 
-.cover__overlay-text {
-  font-size: 1.5rem;
+.cover__heading {
+  font-size: 1.875rem;
   color: #fff;
-  font-weight: 300;
   text-transform: uppercase;
 }
 
-.amp {
-  font-style: italic;
-  font-size: 110%;
-  font-family: Baskerville, "Goudy Old Style", "Palatino", "Book Antiqua", serif;
+.cover__subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #8795a1;
 }
 
 /* SECTION: SCHEDULE */
 
+.l-map {
+  max-width: 30rem;
+  border-radius: .25rem;
+  overflow: hidden;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, .11), 0 5px 15px 0 rgba(0, 0, 0, .08);
+}
+
+.map__content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.map__title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+.map__subtitle {
+  color: #606f7b;
+  font-size: 1rem;
+}
+
+.l-iframe {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.l-timeline {
+  padding-bottom: 3rem;
+}
+
 .timeline {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
   position: relative;
   width: 90%;
   transition: all .4s ease;
@@ -138,6 +200,7 @@
 }
 
 .timeline__header {
+  width: 100%;
   padding-top: .5rem;
   padding-bottom: .5rem;
   padding-left: 1.5rem;
@@ -148,10 +211,7 @@
   position: relative;
   display: inline-block;
   color: #8795a1;
-  left: 50%;
-  border-radius: 30% / 100%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  text-align: center;
 }
 
 .timeline__item {
@@ -254,6 +314,28 @@
   margin-bottom: 1rem;
 }
 
+.timeline__button {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  opacity: .5;
+  background-color: #f1f5f8;
+  color: #b2b7ff;
+  border-radius: .25rem;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -20px -20px;
+}
+
+.timeline__button:hover {
+  background-color: #dae1e7;
+}
+
 /* SECTION: O NÁS */
 
 .about-wrapper {
@@ -306,6 +388,15 @@
 
 .about__text {
   margin-bottom: 1rem;
+  color: #dae1e7;
+}
+
+.about__text::first-letter {
+  line-height: 1;
+  font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
+  float: left;
+  padding-right: .5rem;
+  font-size: 4rem;
 }
 
 .about__text-block {
@@ -316,6 +407,60 @@
 .gender-symbol {
   display: inline-block;
   height: 1rem;
+}
+
+/* SECTION: DARY */
+
+.l-gift {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.gift {
+  flex: 1 1 0%;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gift__heading {
+  font-size: 1.5rem;
+  color: #3d4852;
+}
+
+.gift__text {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #8795a1;
+  line-height: 2;
+}
+
+.gift__button {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: .5rem;
+  font-size: .875rem;
+  font-weight: 900;
+  border-width: 1px;
+  border-color: #794acf;
+  color: #382b5f;
+  background-color: #fff;
+  text-transform: uppercase;
+  border-radius: .25rem;
+  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+}
+
+.gift__button:hover {
+  border-color: #21183c;
+}
+
+.gift__button:focus {
+  outline: 0;
 }
 
 /* RESPONSIVE */
@@ -331,6 +476,10 @@
 }
 
 @media (min-width: 768px) {
+  .l-container {
+    width: 768px;
+  }
+
   .nav {
     width: 768px;
   }
@@ -339,8 +488,7 @@
     font-size: 2.25rem;
   }
 
-  .timeline-bg {
-    padding-bottom: 3rem;
+  .l-timeline {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -354,6 +502,14 @@
 
   .timeline:before {
     left: 50%;
+  }
+
+  .timeline__header {
+    width: auto;
+    left: 50%;
+    border-radius: 30% / 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 
   .timeline__content {
@@ -381,6 +537,14 @@
 
   .timeline__icon-bg {
     left: 50%;
+  }
+
+  .l-gift {
+    flex-direction: row;
+  }
+
+  .gift {
+    margin-bottom: 0;
   }
 }
 
