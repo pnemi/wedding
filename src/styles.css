@@ -77,6 +77,24 @@
   @apply text-xl font-light text-grey-dark;
 }
 
+.countdown {
+  @apply flex absolute;
+  bottom: 3rem;
+}
+
+.countdown__subtitle {
+  @apply absolute w-full text-center text-grey-light font-bold;
+  top: -2rem;
+}
+
+.countdown__item {
+  @apply px-4 text-grey-lighter text-3xl;
+}
+
+.countdown__caption {
+  @apply text-base text-grey-light;
+}
+
 /* SECTION: SCHEDULE */
 
 .l-map {
@@ -112,7 +130,7 @@
 }
 
 .l-timeline {
-  @apply pb-12;
+  @apply py-12;
 }
 
 .timeline {
@@ -122,7 +140,7 @@
 }
 
 .timeline:before {
-  @apply h-full w-1 bg-grey-light absolute;
+  @apply h-full border-r-2 border-grey-light absolute;
   content: "";
   left: 0;
   top: 0;
@@ -135,7 +153,7 @@
 }
 
 .timeline__header {
-  @apply w-full py-2 px-6 mb-12 bg-grey-light text-3xl relative inline-block text-grey-dark text-center;
+  @apply w-full py-2 px-6 mb-12 border-2 border-grey-light text-3xl relative inline-block text-grey-dark text-center;
 }
 
 .timeline__item {
@@ -153,7 +171,7 @@
 }
 
 .timeline__icon-bg {
-  @apply flex w-12 h-12 bg-grey-light absolute border-4 border-grey-light overflow-hidden items-center justify-center;
+  @apply flex w-12 h-12 bg-white absolute border-2 border-grey-light overflow-hidden items-center justify-center;
   left: 0;
   top: 0;
   margin-left: -22px;
@@ -169,10 +187,9 @@
 }
 
 .timeline__content {
-  @apply p-5 bg-grey-lightest rounded;
-  width: 90%;
+  @apply p-5;
+  width: calc(100% - 3rem);
   float: right;
-  box-shadow: 0 3px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -190,8 +207,8 @@
   content: "";
   width: 0;
   height: 0;
-  left: 10%;
-  top: 20px;
+  right: calc(100% - 3rem);
+  top: calc(1.5rem - 8px);
   margin-left: -8px;
   border-top-color: transparent;
   border-bottom-color: transparent;
@@ -202,16 +219,16 @@
 }
 
 .timeline__heading {
-  @apply p-4 text-xl uppercase text-white bg-blue-dark rounded rounded-bl-none rounded-br-none;
+  @apply h-12 flex items-center justify-center text-xl uppercase text-black border-2 border-blue-dark rounded text-center;
   margin: -20px -20px 0 -20px;
 }
 
 .timeline__heading--right {
-  @apply bg-red-dark;
+  @apply border-red-dark;
 }
 
 .timeline__p {
-  @apply my-4;
+  @apply my-4 leading-normal;
 }
 
 .timeline__button {
@@ -288,6 +305,10 @@
   @apply text-grey-lightest;
 }
 
+.gift__subtitle {
+  @apply mb-12 text-grey-light text-center leading-normal;
+}
+
 .l-gift {
   @apply pb-12 flex flex-col;
 }
@@ -318,6 +339,28 @@
 
 .gift__button:focus {
   @apply outline-none;
+}
+
+/* SECTION: Kontakt */
+
+.l-contacts {
+  @apply bg-green-dark;
+}
+
+.l-contact {
+  @apply pb-12 flex;
+}
+
+.contact__item {
+  @apply flex-1 text-center text-white leading-normal;
+}
+
+.contact__item a {
+  @apply text-white;
+}
+
+.contact__icon {
+  @apply w-8 h-8 mb-4;
 }
 
 /* RESPONSIVE */
@@ -360,7 +403,7 @@
   }
 
   .timeline {
-    @apply w-auto;
+    @apply ml-0 w-auto;
   }
 
   .timeline:before {
@@ -368,7 +411,7 @@
   }
 
   .timeline__header {
-    @apply w-auto;
+    @apply w-auto bg-white border-2 border-grey-light;
     left: 50%;
     border-radius: 30% / 100%;
     transform: translateX(-50%);
