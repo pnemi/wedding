@@ -1,0 +1,225 @@
+.heart-loader {
+  display: block;
+  margin-left: 180px;
+  width: 180px;
+  height: 180px;
+  overflow: visible;
+  animation: heart-beat 2s 6s 2 normal forwards;
+}
+
+@keyframes heart-beat {
+  0% {
+    transform-origin: 0 90px;
+    transform: scale(1);
+  }
+  25% {
+    transform-origin: 0 90px;
+    transform: scale(0.97);
+  }
+  35% {
+    transform-origin: 0 90px;
+    transform: scale(0.9);
+  }
+  45% {
+    transform-origin: 0 90px;
+    transform: scale(1.1);
+  }
+  55% {
+    transform-origin: 0 90px;
+    transform: scale(0.9);
+  }
+  65% {
+    transform-origin: 0 90px;
+    transform: scale(1.1);
+  }
+  75% {
+    transform-origin: 0 90px;
+    transform: scale(1.03);
+  }
+  100% {
+    transform-origin: 0 90px;
+    transform: scale(1);
+  }
+}
+
+/* heart beat maybe? */
+@keyframes heart-zoom {
+  0% {
+    width: 180px;
+    height: 180px;
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -90px;
+    width: 200%;
+    height: 200%;
+  }
+}
+
+.heart-loader__group {
+  transform-origin: 0 90px;
+  animation: group-anim 5s 1s 1 normal forwards;
+}
+
+.heart-loader__square {
+  stroke: #b8b8b8;
+  stroke-dasharray: 240, 240;
+  stroke-dashoffset: 240;
+  animation: square-anim 5s 1s 1 normal forwards;
+  animation-fill-mode: forwards;
+}
+
+.heart-loader__circle {
+  stroke: #b8b8b8;
+  stroke-dasharray: 188.522, 188.522;
+  stroke-dashoffset: 188.522;
+  transform-origin: 60px 30px;
+}
+
+.heart-loader__circle.m--left {
+  animation: left-circle-anim 5s 1s 1;
+  animation-fill-mode: forwards;
+}
+
+.heart-loader__circle.m--right {
+  animation: right-circle-anim 5s 1s 1;
+  animation-fill-mode: forwards;
+}
+
+.heart-loader__heartPath {
+  stroke: #e21737;
+  fill: transparent;
+  stroke-dasharray: 308.522, 308.522;
+  stroke-dashoffset: 308.522;
+  animation: heart-anim 5s 1s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes square-anim {
+  12% {
+    stroke-dashoffset: 0;
+  }
+  43% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes left-circle-anim {
+  12% {
+    stroke-dashoffset: 188.522;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes right-circle-anim {
+  12% {
+    stroke-dashoffset: 188.522;
+  }
+  31% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  41% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+  43% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    opacity: 1;
+  }
+  85% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes group-anim {
+  43% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  54% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  90% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+  97% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes heart-anim {
+  55% {
+    stroke-dashoffset: 308.522;
+    fill: transparent;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    fill: transparent;
+  }
+  87% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: #e21737;
+  }
+}

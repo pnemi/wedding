@@ -3,8 +3,6 @@ function countdown(endDate) {
 
   endDate = new Date(endDate).getTime();
 
-  console.log(endDate);
-
   if (isNaN(endDate)) {
     return;
   }
@@ -15,26 +13,28 @@ function countdown(endDate) {
 
     let timeRemaining = parseInt((endDate - startDate) / 1000);
 
-    if (timeRemaining >= 0) {
-      days = parseInt(timeRemaining / 86400);
-      timeRemaining = timeRemaining % 86400;
+    days = parseInt(timeRemaining / 86400);
+    timeRemaining = timeRemaining % 86400;
 
-      hours = parseInt(timeRemaining / 3600);
-      timeRemaining = timeRemaining % 3600;
+    hours = parseInt(timeRemaining / 3600);
+    timeRemaining = timeRemaining % 3600;
 
-      minutes = parseInt(timeRemaining / 60);
-      timeRemaining = timeRemaining % 60;
+    minutes = parseInt(timeRemaining / 60);
+    timeRemaining = timeRemaining % 60;
 
-      seconds = parseInt(timeRemaining);
+    seconds = parseInt(timeRemaining);
 
-      document.querySelector(".days").innerHTML = parseInt(days, 10);
-      document.querySelector(".hours").innerHTML = ("0" + hours).slice(-2);
-      document.querySelector(".minutes").innerHTML = ("0" + minutes).slice(-2);
-      document.querySelector(".seconds").innerHTML = ("0" + seconds).slice(-2);
-      setTimeout(calculate, 1000);
-    } else {
-      return;
-    }
+    document.querySelector(".days").innerHTML = parseInt(Math.abs(days), 10);
+    document.querySelector(".hours").innerHTML = ("0" + Math.abs(hours)).slice(
+      -2
+    );
+    document.querySelector(".minutes").innerHTML = (
+      "0" + Math.abs(minutes)
+    ).slice(-2);
+    document.querySelector(".seconds").innerHTML = (
+      "0" + Math.abs(seconds)
+    ).slice(-2);
+    setTimeout(calculate, 1000);
   }
 
   calculate();

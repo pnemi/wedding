@@ -8,6 +8,10 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link
+      href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       type="text/css"
       media="screen"
@@ -15,9 +19,47 @@
     />
   </head>
   <body>
+    <div class="welcome">
+      <svg
+        class="heart-loader"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 90 90"
+        version="1.1"
+      >
+        <g class="heart-loader__group">
+          <path
+            class="heart-loader__square"
+            stroke-width="1"
+            fill="none"
+            d="M0,30 0,90 60,90 60,30z"
+          />
+          <path
+            class="heart-loader__circle m--left"
+            stroke-width="1"
+            fill="none"
+            d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"
+          />
+          <path
+            class="heart-loader__circle m--right"
+            stroke-width="1"
+            fill="none"
+            d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"
+          />
+          <path
+            class="heart-loader__heartPath"
+            stroke-width="2"
+            d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0"
+          />
+        </g>
+      </svg>
+    </div>
+
     <header>
       <nav class="l-nav">
-        <div class="nav sm:nav--sm">
+        <div class="nav">
           <a href="#venue" class="nav__link">Kdy & Kde</a>
           <a href="#about" class="nav__link">O nás</a>
           <a href="#gifts" class="nav__link">Dary</a>
@@ -36,7 +78,12 @@
             >Berieme sa. Buďte u toho s námi.</small
           >
           <div class="countdown">
-            <div class="countdown__subtitle">Už jen...</div>
+            <div class="countdown__subtitle countdown__subtitle--before">
+              Už jen...
+            </div>
+            <div class="countdown__subtitle countdown__subtitle--after hidden">
+              Už jsme spolu...
+            </div>
             <div class="countdown__item">
               <div class="days"></div>
               <div class="countdown__caption">dní</div>
@@ -178,150 +225,172 @@
 
         <a class="anchor" name="about"></a>
         <section class="about-wrapper">
-          <div class="l-container flex flex-col sm:flex-row">
-            <div class="about about--groom">
-              <img
-                class="about__avatar"
-                src="./public/p-avatar.jpg"
-                alt="petr avatar"
-              />
-              <div class="about__name">
-                <span class="about__name--first">Petr</span>&nbsp;Němeček
-              </div>
-              <div class="about__caption about__caption--groom">
-                Ženich&nbsp;
+          <div class="l-container">
+            <div class="l-row l-about">
+              <div class="about">
                 <img
-                  class="gender-symbol"
-                  src="./public/male-symbol.svg"
-                  alt="male-symbol"
+                  class="about__avatar"
+                  src="./public/p-avatar.png"
+                  alt="petr avatar"
                 />
+                <div class="about__name">
+                  <span class="about__name--first">Petr</span>&nbsp;Němeček
+                </div>
+                <div class="about__caption about__caption--groom">
+                  Ženich&nbsp;
+                  <img
+                    class="gender-symbol"
+                    src="./public/male-symbol.svg"
+                    alt="male-symbol"
+                  />
+                </div>
+                <div class="about__heading">Kdo jsem?</div>
+                <div class="about__text">
+                  <p class="about__text-block">
+                    Přestože jsem se narodil ve Šternberku, celý život žiju v
+                    Olomouci. Vystudoval jsem zde střední průmyslovou školu a
+                    absolvoval magisterské studium informatiky na Univerzitě
+                    Palackého. Od léta 2018, kdy jsem studia zakončil, pracuji
+                    jako programátor webových aplikací. V době, kdy se setkáme
+                    na svatbě mi bude již 25 let. Mám jednoho, o 13 let
+                    mladšího, bratra. Ve volném čase sezení u počítače a hraní
+                    videoher vyvažuju sportem, zejména běháním, a rád se věnuji
+                    osobnímu rozvoji, ať už je to skrz zajímavou literaturu nebo
+                    setkávání se s mými přáteli.
+                  </p>
+                </div>
+                <div class="about__heading">Jak jsme se poznali?</div>
+                <div class="about__text">
+                  <p class="about__text-block">
+                    Libozvučná slovenština již dlouhou dobu lahodila mému
+                    sluchu, nic netušíc, že její zvuk brzy svede za hranice i mé
+                    srdce, konkrétně do malebné vesničky na jihu Oravského
+                    kraje.
+                  </p>
+                  <p class="about__text-block">
+                    Z této země pocházela mladá slečna, se kterou mě nějakou
+                    dobu spojovalo pouze to, že byla sestrou Moniky Andersonové,
+                    která s manželem Mitchem vedla křesťanskou komunitu
+                    pracující s mládeží - Křižovatku, kterou jsem od podzimu
+                    roku 2013 pravidelně navštěvoval. Přestože jsme se během
+                    dalších let příležitostně nepřímo potkávali, ať už při její
+                    návštěvě sestry Moniky v Olomouci nebo mé návštěvě s
+                    Křižovatkou v její místní komunitě na Slovensku, možnosti
+                    blíže se seznámit s mou budoucí vyvolenou ovšem na začátku
+                    léta 2015 dal základ její plánovaný nástup na místní VOŠ
+                    zaměřenou na sociální práci.
+                  </p>
+                  <p class="about__text-block">
+                    Letní prázdniny, plné různých momentů a zážitků, již jsme
+                    byli společně součástí, vyvrcholily uvědoměním, že ona je
+                    tou, se kterou si dovedu živě představit prožívat všechny
+                    strasti a starosti, které život skýtá. Nic takového jsem v
+                    životě necítil, čili jedinné, co zbývalo, bylo dostat
+                    příležitost svoje pocity vyjádřit.
+                  </p>
+                  <p class="about__text-block">
+                    V blížícím se podzimu jsme s užší skupinou lidí z Křižovatky
+                    měli v plánu osvěžit naše pohybové schopnosti v tanečních
+                    lekcích. Přestože jsem dlouho předtím měl domluvenou jinou
+                    taneční partnerku, její šaty točící se opodál v rytmu
+                    klasických i moderních tanců mi zamotávali hlavu čím dál
+                    víc. Jednoho večera po jedné z našich posledních lekcí jsem
+                    ji při odchodu ze sálu slíbil, že ji další den chci povědět
+                    něco důležitého. Cestou domů jsem kul plán na zítřejší
+                    setkání, když v tom jsem si uvědomil, že nechci čekat.
+                    Převlékl jsem svůj oblek do běžeckého a vyběhl jsem směrem k
+                    ní domů. Zaklepal jsem na okno a po krátké procházce plné
+                    odhodlávání se, jsem narovinu vyřkl "Ľúbim Ťa" a nechal jsem
+                    ji čas na rozmyšlenou, jak s touto informací naloží.
+                    Netrvalo však ani den a při procházce parkem mi řekla, že by
+                    se se mnou ráda procházela také životem.
+                  </p>
+                  <p class="about__text-block">
+                    Jsem velmi rád, že se jsme tuto skutečnost po třech letech
+                    nedávno stvrdili našim zasnoubením. Jsem vdečný za to, že
+                    spolu můžeme být, cestovat, plánovat budoucnost a že se mohu
+                    stát součástí její skvělé rodiny.
+                  </p>
+                </div>
               </div>
-              <div class="about__heading">Kdo jsem?</div>
-              <div class="about__text">
-                <p class="about__text-block">
-                  Přestože jsem se narodil ve Šternberku, celý život žiju v
-                  Olomouci. Vystudoval jsem zde střední průmyslovou školu a
-                  absolvoval magisterské studium informatiky na Univerzitě
-                  Palackého. Od léta 2018, kdy jsem studia zakončil, pracuji
-                  jako programátor webových aplikací. V době, kdy se setkáme na
-                  svatbě mi bude již 25 let. Mám jednoho, o 13 let mladšího,
-                  bratra. Ve volném čase sezení u počítače a hraní videoher
-                  vyvažuju sportem, zejména běháním, a rád se věnuji osobnímu
-                  rozvoji, ať už je to skrz zajímavou literaturu nebo setkávání
-                  se s mými přáteli.
-                </p>
-              </div>
-              <div class="about__heading">Jak jsme se poznali?</div>
-              <div class="about__text">
-                <p class="about__text-block">
-                  Libozvučná slovenština již dlouhou dobu lahodila mému sluchu,
-                  nic netušíc, že její zvuk brzy svede za hranice i mé srdce,
-                  konkrétně do malebné vesničky na jihu Oravského kraje.
-                </p>
-                <p class="about__text-block">
-                  Z této země pocházela mladá slečna, se kterou mě nějakou dobu
-                  spojovalo pouze to, že byla sestrou Moniky Andersonové, která
-                  s manželem Mitchem vedla křesťanskou komunitu pracující s
-                  mládeží - Křižovatku, kterou jsem od podzimu roku 2013
-                  pravidelně navštěvoval. Přestože jsme se během dalších let
-                  příležitostně nepřímo potkávali, ať už při její návštěvě
-                  sestry Moniky v Olomouci nebo mé návštěvě s Křižovatkou v její
-                  místní komunitě na Slovensku, možnosti blíže se seznámit s mou
-                  budoucí vyvolenou ovšem na začátku léta 2015 dal základ její
-                  plánovaný nástup na místní VOŠ zaměřenou na sociální práci.
-                </p>
-                <p class="about__text-block">
-                  Letní prázdniny, plné různých momentů a zážitků, již jsme byli
-                  společně součástí, vyvrcholily uvědoměním, že ona je tou, se
-                  kterou si dovedu živě představit prožívat všechny strasti a
-                  starosti, které život skýtá. Nic takového jsem v životě
-                  necítil, čili jedinné, co zbývalo, bylo dostat příležitost
-                  svoje pocity vyjádřit.
-                </p>
-                <p class="about__text-block">
-                  V blížícím se podzimu jsme s užší skupinou lidí z Křižovatky
-                  měli v plánu osvěžit naše pohybové schopnosti v tanečních
-                  lekcích. Přestože jsem dlouho předtím měl domluvenou jinou
-                  taneční partnerku, její šaty točící se opodál v rytmu
-                  klasických i moderních tanců mi zamotávali hlavu čím dál víc.
-                  Jednoho večera po jedné z našich posledních lekcí jsem ji při
-                  odchodu ze sálu slíbil, že ji další den chci povědět něco
-                  důležitého. Cestou domů jsem kul plán na zítřejší setkání,
-                  když v tom jsem si uvědomil, že nechci čekat. Převlékl jsem
-                  svůj oblek do běžeckého a vyběhl jsem směrem k ní domů.
-                  Zaklepal jsem na okno a po krátké procházce plné odhodlávání
-                  se, jsem narovinu vyřkl "Ľúbim Ťa" a nechal jsem ji čas na
-                  rozmyšlenou, jak s touto informací naloží. Netrvalo však ani
-                  den a při procházce parkem mi řekla, že by se se mnou ráda
-                  procházela také životem.
-                </p>
-                <p class="about__text-block">
-                  Jsem velmi rád, že se jsme tuto skutečnost po třech letech
-                  nedávno stvrdili našim zasnoubením. Jsem vdečný za to, že
-                  spolu můžeme být, cestovat, plánovat budoucnost a že se mohu
-                  stát součástí její skvělé rodiny.
-                </p>
-              </div>
-            </div>
-            <div class="about about--bride">
-              <img
-                class="about__avatar"
-                src="http://placekitten.com/g/200/200"
-                alt=""
-              />
-              <div class="about__name">
-                <span class="about__name--first">Michaela</span>&nbsp;Smolková
-              </div>
-              <div class="about__caption about__caption--bride">
-                Nevesta&nbsp;
+              <div class="about">
                 <img
-                  class="gender-symbol"
-                  src="./public/female-symbol.svg"
-                  alt="female-symbol"
+                  class="about__avatar"
+                  src="./public/m-avatar.png"
+                  alt="miška avatar"
                 />
-              </div>
-              <div class="about__heading">Kto som?</div>
-              <div class="about__text">
-                <p class="about__text-block">
-                  Som Miška, pochádzam z malej dedinky na severe Slovenska, z
-                  Oravskej Poruby. Už od malička sa mi stáva, že ma ľudia
-                  neoslovujú mojim menom, pretože mám 3 sestry, s ktorými si ma
-                  dodnes ľudia pletú. Počas základnej a strednej školy som sa
-                  aktívne venovala športu, hlavne atletike, v ktorej sa mi
-                  podarilo získať pár medailí. Svoju budúcnosť však vidím v inej
-                  profesii a práve preto som sa vybrala študovať do Česka. Tu v
-                  Olomouci som vyštudovala vyššiu odbornú školu a bakalárske
-                  štúdium sociálnej práce a momentálne pokračujem na
-                  „magistrovi“ v Olomouci a v Brne. Vo voľnom čase rada čítam
-                  knižky, cestujem, trávim čas s kamarátmi a rodinou.
-                </p>
-              </div>
-              <div class="about__heading">Ako sme sa spoznali?</div>
-              <div class="about__text">
-                <p class="about__text-block">
-                  Prvýkrát sme sa videli na víkendovke Križovatky vo Veličnej na
-                  jeseň 2014 kde sa nedalo si ho nevšimnúť. Bol drsný a milý
-                  zároveň, pre mňa hrozne tajomný. Od vtedy som vedela, že ho
-                  musím spoznať viac.
-                </p>
-                <p class="about__text-block">
-                  Stalo sa tak počas leta 2015, ktoré som strávila v Olomouci.
-                  Počas tohto leta sme sa často spolu s ďalšími ľuďmi
-                  stretávali, chodili na prechádzky, trávili spoločné večery u
-                  mňa všetci spolu. V Septembri sme šli už iba my dvaja na kávu
-                  a od tohto dňa sme sa začali stretávať stále viac a viac.
-                </p>
-                <p class="about__text-block">
-                  19.10.2015, asi okolo deviatej večer mi Peťko zaklopal na okno
-                  a vytiahol ma na prechádzku. V tento večer mi povedal, že sa
-                  do mňa zaľúbil a ja som mu na druhý deň povedala, že aj ja do
-                  neho. Od tohto „nášho“ utorku sme spolu zažili veľa srandy,
-                  radosti a smiechu, veľa krásnych aj tých ťažších dní, vzájomne
-                  sa spoznávame, spoznávame nových ľudí a nové miesta. Jedno z
-                  miest, ktoré sme spolu navštívili bola Viedeň, kde som skoro
-                  po troch rokoch nášho vzťahu dostala nádherný prstienok a
-                  stala sa tak jeho snúbenicou.
-                </p>
+                <div class="about__name">
+                  <span class="about__name--first">Michaela</span>&nbsp;Smolková
+                </div>
+                <div class="about__caption about__caption--bride">
+                  Nevesta&nbsp;
+                  <img
+                    class="gender-symbol"
+                    src="./public/female-symbol.svg"
+                    alt="female-symbol"
+                  />
+                </div>
+                <div class="about__heading">Kto som?</div>
+                <div class="about__text">
+                  <p class="about__text-block">
+                    Som Miška, pochádzam z malej dedinky na severe Slovenska, z
+                    Oravskej Poruby. Už od malička sa mi stáva, že ma ľudia
+                    neoslovujú mojim menom, pretože mám 3 sestry, s ktorými si
+                    ma dodnes ľudia pletú. Počas základnej a strednej školy som
+                    sa aktívne venovala športu, hlavne atletike, v ktorej sa mi
+                    podarilo získať pár medailí. Svoju budúcnosť však vidím v
+                    inej profesii a práve preto som sa vybrala študovať do
+                    Česka. Tu v Olomouci som vyštudovala vyššiu odbornú školu a
+                    bakalárske štúdium sociálnej práce a momentálne pokračujem
+                    na „magistrovi“ v Olomouci a v Brne. Vo voľnom čase rada
+                    čítam knižky, cestujem, trávim čas s kamarátmi a rodinou.
+                  </p>
+                </div>
+                <div class="about__heading">Ako sme sa spoznali?</div>
+                <div class="about__text">
+                  <p class="about__text-block">
+                    Prvýkrát sme sa videli na víkendovke Križovatky vo Veličnej
+                    na jeseň 2014, kde sa nedalo si ho nevšimnúť. Vyzeral drsno
+                    a zároveň bol veľmi milý, pre mňa hrozne tajomný. Od vtedy
+                    som vedela, že ho musím spoznať viac. Stalo sa tak počas
+                    leta 2015, ktoré som strávila v Olomouci.
+                  </p>
+                  <p class="about__text-block">
+                    Počas tohto leta som sa rozhodovala či pôjdem na vysokú
+                    školu tu do Olomouca alebo na Slovensku. A tento chlapec v
+                    tom mal jasno ešte skôr ako ja. Celé leto ma presviedčal o
+                    tom, že Olomouc je tá správna voľba. Toto leto bolo pre mňa
+                    príležitosťou Peťka viac spoznať. Často sme sa spolu s
+                    ďalšími ľuďmi stretávali, chodili na prechádzky, trávili
+                    spoločné večery u mňa všetci spolu. No v Septembri sme tieto
+                    stretnutia zúžili iba na nás dvoch. Chodili sme spolu na
+                    kávu, na prechádzky, chodil ma odprevádzať domov stále viac
+                    a viac a náš vzťah sa postupne, celkom prirodzene menil.
+                  </p>
+                  <p class="about__text-block">
+                    19.10.2015, asi okolo deviatej večer, mi Peťko zaklopal na
+                    okno a vytiahol ma na prechádzku. Už niekoľkokrát predtým za
+                    mnou takto prišiel a tak som sa rovnako ako iné dni
+                    prezliekla a šla von. Až neskôr som pochopila, že tento deň
+                    nie je ako tie predošlé. V tento večer mi povedal, že sa do
+                    mňa zaľúbil. Nečakala som to a to sa odzrkadlilo na mojej
+                    chaotickej odpovedi a obaja sme domov odchádzali neistí.
+                    Keďže sme už dávnejšie mali dohodnutú prechádzku v parku
+                    hneď na druhý deň, bola som pripravená mu povedať čo cítim
+                    ja k nemu.
+                  </p>
+                  <p class="about__text-block">
+                    Od tohto „nášho“ utorku sme spolu zažili veľa srandy,
+                    radosti a smiechu, veľa krásnych aj tých ťažších dní,
+                    situácií kde sa vzájomne spoznávame a učíme jeden od
+                    druhého, spolu spoznávame nových ľudí a nové miesta. Jedno z
+                    miest, ktoré sme spolu navštívili bola Viedeň, kde som skoro
+                    po troch rokoch nášho vzťahu dostala nádherný prstienok. Bol
+                    to tak isto prekvapivý moment ako na začiatku vzťahu, no v
+                    reakcii som sa zlepšila a tak som sa v tento piatok stala
+                    jeho snúbenicou.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -359,8 +428,8 @@
               <div class="gift">
                 <div class="gift__heading">Vzkazy</div>
                 <div class="gift__text">
-                  Rovněž nás potěší vzkaz nebo dopis, který si můžeme připomenout i za pár let.
-                  Anebo nám nakreslete obrázek.
+                  Rovněž nás potěší vzkaz nebo dopis, který si můžeme
+                  připomenout i za pár let. Anebo nám nakreslete obrázek.
                 </div>
               </div>
               <div class="gift">
@@ -368,7 +437,8 @@
                 <div class="gift__text">
                   V případě, že jste si z předešlých možností nevybrali, můžete
                   nám příspět finančími prostředky v obálce či převodem na české
-                  ú.č. 209365473/0600 nebo na slovenské XXX.
+                  ú.č. 209365473/0600 nebo na slovenské IBAN SK40 0900 0000 0050
+                  2376 3628.
                 </div>
               </div>
             </div>
@@ -381,32 +451,116 @@
             <h1 class="heading">Máte dotaz?</h1>
 
             <div class="l-row l-contact">
-              <div class="contact__item">
-                <img
-                  class="contact__icon"
-                  src="./public/phone.svg"
-                  alt="phone"
-                />
-
-                <p>+420 776 705 330</p>
-                <p>+421 910 268 020</p>
+              <div class="contact__item contact__item--phone">
+                <div class="phone is-animating"></div>
+                <div class="contact__info">
+                  <p>Peťo: +420 776 705 330</p>
+                  <p>Miška: +421 910 268 020</p>
+                </div>
               </div>
 
-              <div class="contact__item">
-                <img
-                  class="contact__icon"
-                  src="./public/email.svg"
-                  alt="email"
-                />
-
-                <p>
-                  <a href="mailto:thenemecek@gmail.com">thenemecek@gmail.com</a>
-                </p>
-                <p>
-                  <a href="mailto:mikaela.smolkova@gmail.com"
-                    >mikaela.smolkova@gmail.com</a
+              <div class="contact__item contact__item--mail">
+                <div class="envelope-wrapper">
+                  <svg
+                    class="envelope"
+                    width="25px"
+                    height="27px"
+                    viewBox="0 0 25 27"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
                   >
-                </p>
+                    <g
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g>
+                        <path
+                          class="envelope-color"
+                          id="mail-envelope-open-path-copy-2"
+                          fill="#8D8D8D"
+                          d="M12.5,0 L25,11 L25,25.0059397 C25,26.1054862 24.10296,27 22.9964051,27 L2.00359486,27 C0.88976324,27 0,26.1072288 0,25.0059397 L0,11 L12.5,0 Z"
+                        ></path>
+                        <path
+                          class="envelope-fill"
+                          fill="#FFFFFF"
+                          d="M12.5,1.30000019 L1.54687503,10.9909992 L1.54687503,22.190589 L23.4415036,22.190589 L23.4415031,10.9909992 L14.4278349,3 L12.5,1.30000019 Z"
+                        ></path>
+                      </g>
+                      <g
+                        class="envelope__paper"
+                        transform="translate(3.000000, 3.000000)"
+                      >
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M17.0025781,-8.8817842e-16 C18.1090746,-8.8817842e-16 19,0.89525812 19,1.99961498 L19,5.36 L19.0000008,16 L1.0191048e-09,16 L-1.33226763e-15,5.36 L-1.33226763e-15,1.99961498 C-1.33226763e-15,0.88743329 0.89427625,-8.8817842e-16 1.99742191,-8.8817842e-16 L17.0025781,-8.8817842e-16 Z"
+                        ></path>
+                        <path
+                          class="envelope-fill"
+                          fill="#FFFFFF"
+                          d="M18,2.00862577 C18,1.45157714 17.5452911,1 17.0000398,1 L1.9999602,1 C1.44769743,1 1,1.44373571 1,2.00207596 L1,16.0313873 L18,16.0313873 L18,2.00862577 Z"
+                        ></path>
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M3,4 L3,5 L16,5 L16,4 L3,4 L3,4 L3,4 Z"
+                        ></path>
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M3,7 L3,8 L16,8 L16,7 L3,7 L3,7 L3,7 Z"
+                        ></path>
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M3,13 L3,14 L16,14 L16,13 L3,13 L3,13 L3,13 Z"
+                        ></path>
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M3,10 L3,11 L16,11 L16,10 L3,10 L3,10 L3,10 Z"
+                        ></path>
+                      </g>
+                      <g transform="translate(0.000000, 11.000000)">
+                        <path
+                          class="envelope-color"
+                          fill="#8D8D8D"
+                          d="M1.484375,8.8817842e-16 L10.5625,8 L14.4375,8 L22.7146597,0.604003909 C22.7146597,0.604003909 23.390625,0 23.390625,0 L25,8.8817842e-16 L25,14.0059397 C25,15.1054862 24.10296,16 22.9964051,16 L2.00359486,16 C0.88976324,16 0,15.1072288 0,14.0059397 L0,8.8817842e-16 L1.484375,8.8817842e-16 Z"
+                        ></path>
+                        <path
+                          class="envelope-fill"
+                          fill="#FFFFFF"
+                          d="M9.5,9 L2.5,15 L22.5,15 L15.5,9 L9.5,9 L9.5,9 L9.5,9 Z"
+                        ></path>
+                        <path
+                          class="envelope-fill"
+                          fill="#FFFFFF"
+                          d="M23.68514,14.7251701 L16,8.0170898 L24,1 L24,7.5000199 L24,14.0000398 C24,14.2831537 23.8789949,14.5418569 23.68514,14.7251701 L23.68514,14.7251701 L23.68514,14.7251701 L23.68514,14.7251701 Z"
+                        ></path>
+                        <path
+                          class="envelope-fill"
+                          fill="#FFFFFF"
+                          d="M9,8.0170898 L1,1 L1,7.5000199 L1,14.0000398 C1,14.2831537 1.12100514,14.5418569 1.31486,14.7251701 L9,8.0170898 Z"
+                        ></path>
+                      </g>
+                    </g>
+                  </svg>
+                </div>
+                <div class="contact__info">
+                  <p>
+                    <a href="mailto:thenemecek@gmail.com"
+                      >thenemecek@gmail.com</a
+                    >
+                  </p>
+                  <p>
+                    <a href="mailto:mikaela.smolkova@gmail.com"
+                      >mikaela.smolkova@gmail.com</a
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </section>
@@ -417,7 +571,16 @@
     <script src="./dist/countdown.js"></script>
     <script>
       (function() {
-        countdown("7/27/2019 14:00:00");
+        var date = "7/27/2019 14:00:00";
+        if (Date.now() > new Date(date).getTime()) {
+          document
+            .querySelector(".countdown__subtitle--before")
+            .classList.add("hidden");
+          document
+            .querySelector(".countdown__subtitle--after")
+            .classList.remove("hidden");
+        }
+        countdown(date);
       })();
     </script>
   </body>

@@ -1,0 +1,32 @@
+.envelope {
+  width: 300px;
+  height: 80px;
+  display: block;
+  margin: auto;
+  animation: pulse 3s infinite;
+}
+
+.envelope-color {
+  fill: #ca2828;
+}
+
+.envelope-fill {
+  fill: #dae1e7;
+}
+
+.envelope__paper {
+  transform: translateY(10px) translateX(3px);
+  animation: envelope-sliding 3s infinite;
+}
+
+@keyframes envelope-sliding {
+  0% {
+    transform: translateY(10px) translateX(3px);
+  }
+  25% {
+    transform: translateY(3px) translateX(3px);
+  }
+  100% {
+    transform: translateY(10px) translateX(3px);
+  }
+}
