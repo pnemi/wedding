@@ -93,6 +93,7 @@ body {
 
 .cover__overlay {
   @apply w-full h-full absolute flex flex-col items-center justify-center;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
