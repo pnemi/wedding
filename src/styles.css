@@ -86,7 +86,8 @@ body {
 }
 
 .l-cover {
-  @apply z-hide text-center bg-cover bg-center relative w-screen h-screen;
+  @apply z-hide text-center bg-cover relative w-screen h-screen;
+  background-position: center 40%;
   background-image: url("../public/cover.jpg");
 }
 
